@@ -8,23 +8,33 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background:#f4f4f4;
+    background:#f4f4f4; /* Fallback color */
     padding:24px;
     margin:0;
+    
+    /* --- NEW BACKGROUND IMAGE STYLES --- */
+    /* Assuming the image is named 'AF_background_pattern.jpg' and is in the same folder */
+    background-image: url('AF_background_pattern.jpg'); 
+    background-size: 400px auto; /* Adjust this size to control how large the repeating pattern appears */
+    background-repeat: repeat; /* Allows the image to tile across the whole page */
+    background-attachment: fixed; /* Keeps the background stationary */
+    background-position: center center;
+    /* ------------------------------------ */
   }
 
   .container {
     position: relative;
     max-width: 850px;
     margin: auto;
-    background: #ffffff;
+    /* This white background ensures the form fields are readable against the busy background pattern */
+    background: #ffffff; 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     overflow: hidden;
   }
 
-  /* WATERMARK IMAGE */
+  /* WATERMARK IMAGE (Original code kept as is) */
   .watermark {
     position: absolute;
     top: 50%;
@@ -99,14 +109,12 @@
 
 <div class="container">
 
-  <!-- WATERMARK IMAGE (EMBEDDED) -->
   <img class="watermark" src="data:image/jpeg;base64,
 {{AF_BASE64_IMAGE}}
 " alt="Watermark">
 
   <div class="content">
 
-    <!-- HEADER IMAGE (EMBEDDED) -->
     <div class="header">
       <img src="data:image/jpeg;base64,
 {{AF2_BASE64_IMAGE}}
