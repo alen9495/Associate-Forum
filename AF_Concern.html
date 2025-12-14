@@ -12,21 +12,18 @@
     padding:24px;
     margin:0;
     
-    /* --- NEW BACKGROUND IMAGE STYLES --- */
-    /* Assuming the image is named 'AF_background_pattern.jpg' and is in the same folder */
-    background-image: url('AF.jpg'); 
-    background-size: 400px auto; /* Adjust this size to control how large the repeating pattern appears */
-    background-repeat: repeat; /* Allows the image to tile across the whole page */
-    background-attachment: fixed; /* Keeps the background stationary */
+    /* --- BACKGROUND STYLES FROM PREVIOUS STEP --- */
+    background-image: url('AF_background_pattern.jpg'); 
+    background-size: 400px auto; 
+    background-repeat: repeat; 
+    background-attachment: fixed; 
     background-position: center center;
-    /* ------------------------------------ */
   }
 
   .container {
     position: relative;
     max-width: 850px;
     margin: auto;
-    /* This white background ensures the form fields are readable against the busy background pattern */
     background: #ffffff; 
     padding: 30px;
     border-radius: 8px;
@@ -116,9 +113,7 @@
   <div class="content">
 
     <div class="header">
-      <img src="data:image/jpeg;base64,
-{{AF2_BASE64_IMAGE}}
-" alt="Amazon Associate Forum">
+      <img src="AF.jpg" alt="Amazon Associate Forum Logo">
     </div>
 
     <form onsubmit="return sendMail(event)">
@@ -203,4 +198,3 @@ ${concern}`;
 
 </body>
 </html>
-
